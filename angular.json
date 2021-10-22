@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "saad"
+  "defaultProject": "saad",
+  "cli": {
+    "analytics": false
+  }
 }

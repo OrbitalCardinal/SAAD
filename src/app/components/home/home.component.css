@@ -1,0 +1,49 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #999;
+    
+}
+
+.medio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px #999;
+    padding: 10px;
+    width: 20%;
+    border: 5px;
+    margin: 15px;
+    border-radius: 5px;
+    
+}
+.ambos{
+    flex-direction: column;
+    justify-content: space-around;
+}
+.otro{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+header p{
+    margin: 0px !important;
+}
+.final{
+    color: #999;
+    position:absolute; 
+    bottom:1px; 
+    width:100%;  
+    text-align:center;
+}

@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VisualizacionComponent } from './components/visualizacion/visualizacion.component';
 
 
 
@@ -22,13 +23,15 @@ const routes:Routes =[
   {path: "home", component: HomeComponent},
   {path:"", component: LoginComponent, data: { animation: "login" }},
   {path:"signup", component: SignupComponent, data: { animation: "signup"}},
+  {path:"visualizacion", component:VisualizacionComponent},
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    VisualizacionComponent,
   ],
   imports: [
     BrowserModule,
