@@ -24,12 +24,12 @@ router.post("/data", (req, res, next) => {
 
             //Use the mv() method to place the file in upload directory (i.e. "uploads")
             data.mv('./uploads/' + data.name);
-
-            const csv_file = fs.createReadStream(path.join(__dirname, "../uploads/iris.csv"));
+            const csv_file = fs.createReadStream(path.join(__dirname, "../uploads/", data.name));
             Papa.parse(csv_file, {
                 header: true,
                 delimiter: ",",
                 complete: (result) => {
+                    console.log(result)
                     res.send({
                         status: true,
                         message: 'File is uploaded',
