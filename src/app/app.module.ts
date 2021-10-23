@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule} from "@angular/forms"
 import { MatButtonModule } from "@angular/material/button"
 import { MatInputModule } from "@angular/material/input"
 import { MatIconModule } from "@angular/material/icon"
+import {MatTableModule} from '@angular/material/table';
+
 
 
 // Component imports
@@ -16,6 +18,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VisualizacionComponent } from './components/visualizacion/visualizacion.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -32,6 +36,8 @@ const routes:Routes =[
     LoginComponent,
     SignupComponent,
     VisualizacionComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,7 @@ const routes:Routes =[
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    MatTableModule,
     FormsModule,
     ReactiveFormsModule
   ],
