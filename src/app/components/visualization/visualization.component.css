@@ -7,9 +7,11 @@
     box-shadow: 2px 2px 5px #999;
     
 }
+
 .medio{
+    display: flex;
+    gap: 10px;
     padding: 10px;
-    
 }
 header p{
     margin: 0px !important;
@@ -21,13 +23,26 @@ header p{
     background-color: #999;
     width: 98%;
 }
-table{
-    width: 60%;
-}
+
 .conjunto{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.3fr;
+    gap: 20px;
+    /* align-items: center; */
+    /* justify-content: space-between; */
     padding: 20px;
+}
+
+mat-progress-spinner { 
+    width: 20px;
+}
+
+.table-container {
+    height: 60vh;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
 }
