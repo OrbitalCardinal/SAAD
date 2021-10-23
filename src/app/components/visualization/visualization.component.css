@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #999;
+    
+}
+.medio{
+    padding: 10px;
+    
+}
+header p{
+    margin: 0px !important;
+}
+
+.otro{
+    border: 0;
+    height: 1px;
+    background-color: #999;
+    width: 98%;
+}
+table{
+    width: 60%;
+}
+.conjunto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}

@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule} from "@angular/forms"
 import { MatButtonModule } from "@angular/material/button"
 import { MatInputModule } from "@angular/material/input"
 import { MatIconModule } from "@angular/material/icon"
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -17,7 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VisualizacionComponent } from './components/visualizacion/visualizacion.component';
+import { VisualizationComponent } from './components/visualization/visualization.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -27,7 +27,7 @@ const routes:Routes =[
   {path: "home", component: HomeComponent},
   {path:"", component: LoginComponent, data: { animation: "login" }},
   {path:"signup", component: SignupComponent, data: { animation: "signup"}},
-  {path:"visualizacion", component:VisualizacionComponent},
+  {path:"visualization", component: VisualizationComponent},
 ];
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ const routes:Routes =[
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    VisualizacionComponent,
+    VisualizationComponent,
     HeaderComponent,
     FooterComponent,
   ],
