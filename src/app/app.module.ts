@@ -20,8 +20,9 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VisualizationComponent } from './components/visualization/visualization.component';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GraphingComponent } from './components/graphing/graphing.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -30,6 +31,7 @@ const routes:Routes =[
   {path:"", component: LoginComponent, data: { animation: "login" }},
   {path:"signup", component: SignupComponent, data: { animation: "signup"}},
   {path:"visualization", component: VisualizationComponent},
+  {path:"graphing", component: GraphingComponent}
 ];
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ const routes:Routes =[
     VisualizationComponent,
     HeaderComponent,
     FooterComponent,
+    GraphingComponent
   ],
   imports: [
     BrowserModule,
