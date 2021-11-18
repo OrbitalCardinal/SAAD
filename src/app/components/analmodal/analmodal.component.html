@@ -1,0 +1,14 @@
+<div class="background">
+    <div class="main-container">
+        <hr>
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre del análisis:</mat-label>
+            <input type="text"   matInput [(ngModel)]="nombre">
+        </mat-form-field>
+        <div class="button-area">
+            <button mat-raised-button color="primary" (click)="redirect(nombre)">Continuar</button>
+            <button mat-raised-button color="warn" (click)="closeModal()">Cancelar</button>
+        </div>
+        
+    </div>
+</div>

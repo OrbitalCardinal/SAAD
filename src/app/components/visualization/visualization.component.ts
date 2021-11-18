@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from "@angular/router";
 
 export interface PeriodicElement {
   name: string;
@@ -22,8 +23,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ["./visualization.component.css"]
 })
 
-export class VisualizationComponent {
-  constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
+export class VisualizationComponent implements OnInit {
+  constructor(private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { 
+    console.log(this.router.getCurrentNavigation()?.extras.state)
+  }
+
+  nombre: String;
+  ngOnInit(): void {
+    this.nombre = history.state.nombre;
+  }
+
   displayedColumns: string[] = [];
   dataSource = ELEMENT_DATA;
   uploading: Boolean = false;
@@ -45,6 +54,10 @@ export class VisualizationComponent {
         });
     }
 
+  }
+
+  redirect() {
+    this.router.navigate(['/graphing'], {state: {nombre: this.nombre}});
   }
 
 

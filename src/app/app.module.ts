@@ -10,7 +10,7 @@ import { MatButtonModule } from "@angular/material/button"
 import { MatInputModule } from "@angular/material/input"
 import { MatIconModule } from "@angular/material/icon"
 import { MatTableModule } from '@angular/material/table';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -23,6 +23,7 @@ import { VisualizationComponent } from './components/visualization/visualization
 import { FooterComponent } from './components/footer/footer.component';
 import { GraphingComponent } from './components/graphing/graphing.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AnalmodalComponent } from './components/analmodal/analmodal.component';
 
 
 
@@ -42,7 +43,8 @@ const routes:Routes =[
     VisualizationComponent,
     HeaderComponent,
     FooterComponent,
-    GraphingComponent
+    GraphingComponent,
+    AnalmodalComponent,
   ],
   imports: [
     BrowserModule,

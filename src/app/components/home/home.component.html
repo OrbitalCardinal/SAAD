@@ -1,20 +1,35 @@
 <header-component></header-component>
-<br>
+<br />
 <div class="medio">
-    <p style="font-size: 22px;">Analisis realizados</p>
-    <p><button mat-raised-button color="accent" style="color: white; font-size: 18px;" routerLink="/visualization">+ Nuevo</button></p>
+  <p style="font-size: 22px">Analisis realizados</p>
+  <p>
+    <button
+     (click)="showModal = true"
+      mat-raised-button
+      color="accent"
+      style="color: white; font-size: 18px"
+    >
+      + Nuevo Análisis
+    </button>
+  </p>
 </div>
 
-<hr class="otro">
+<hr class="otro" />
 
-    <div class="tarjeta">
-        <div class="ambos">
-            <p style="color: #999;">Fecha</p>
-            <p style="font-weight: bold;">Analisis de finanzas</p>
-            <p style="color: #999;"><span style="font-weight: bold;">Datos:</span> datos.csv</p>
-        </div>
-        <button mat-icon-button><mat-icon style="color: #999;">save_alt</mat-icon></button>
-        
-       
-    </div>
+<div  class="contenedor">
+<div class="tarjeta" *ngFor="let analisis of listaAnalisis">
+  <div class="ambos">
+    <p style="color: #999">{{analisis.fecha}}</p>
+    <p style="font-weight: bold">{{analisis.nombre}}</p>
+    <p style="color: #999">
+      <span style="font-weight: bold">Datos:</span> {{analisis.archivo}}
+    </p>
+  </div>
+  <button mat-icon-button>
+    <mat-icon style="color: #999">save_alt</mat-icon>
+  </button>
+</div>
+</div>
+<app-analmodal *ngIf="showModal" (onClose)="onClose($event)"></app-analmodal>
+
 <footer-component></footer-component>

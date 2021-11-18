@@ -5,6 +5,11 @@
     justify-content: space-between;
     padding: 10px;
 }
+.contenedor{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .tarjeta{
     display: flex;

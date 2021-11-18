@@ -2,6 +2,8 @@ import { Component } from "@angular/core";
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { slideInAnimation } from "src/app/animations";
+import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -18,6 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 
 export class LoginComponent {
+  constructor(private router:Router, private http:HttpClient){}
     emailFormControl = new FormControl('', [
         Validators.required,
         Validators.email,
@@ -25,6 +28,23 @@ export class LoginComponent {
     passwordFormControl = new FormControl('', [
         Validators.required
     ]);
+
+    email:String="";
+  
+    password:String="";
+    async onSubmit() {
+      const cuentas={
+        email:this.email,
+        password:this.password,
+      }
+      try {
+        const response:any = await this.http.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBa0mdLVfJYIhjmxfWztucW1UxU5SG0GPI", cuentas).toPromise();
+        this.router.navigate(["/home"]);
+
+      } catch(error) {
+        console.log(error);
+      }
+    } 
 
     matcher = new MyErrorStateMatcher();
 }
